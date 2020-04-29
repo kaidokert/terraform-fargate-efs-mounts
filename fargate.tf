@@ -71,7 +71,7 @@ resource "aws_security_group" "test_security_group" {
     to_port          = 80
   }
   ingress {
-    cidr_blocks      = [ "0.0.0.0/0"]
+    self = true
     protocol = "tcp"
     from_port        = 2049
     to_port          = 2049
